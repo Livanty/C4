@@ -23,40 +23,11 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            SpriteView(scene: scene)
+            GameView()
                 .ignoresSafeArea()
-
-//            // Joy-Con area
-//            HStack {
-//                // LEFT BUTTON
-//                Image(systemName: "arrow.left.circle.fill")
-//                    .resizable()
-//                    .frame(width: 60, height: 60)
-//                    .foregroundColor(isMovingLeft ? .green : .blue)
-//                    .gesture(
-//                        DragGesture(minimumDistance: 0)
-//                            .onChanged { _ in isMovingLeft = true }
-//                            .onEnded { _ in isMovingLeft = false }
-//                    )
-//
-//                Spacer()
-//
-//                // RIGHT BUTTON
-//                Image(systemName: "arrow.right.circle.fill")
-//                    .resizable()
-//                    .frame(width: 60, height: 60)
-//                    .foregroundColor(isMovingRight ? .green : .blue)
-//                    .gesture(
-//                        DragGesture(minimumDistance: 0)
-//                            .onChanged { _ in isMovingRight = true }
-//                            .onEnded { _ in isMovingRight = false }
-//                    )
-//            }
-//            .padding(.horizontal, 50)
-//            .padding(.bottom, 40)
-//            .frame(maxHeight: .infinity, alignment: .bottom)
         }
     }
+
 }
 
 
