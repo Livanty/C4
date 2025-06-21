@@ -9,30 +9,20 @@ import SwiftUI
 import SpriteKit
 
 struct ContentView: View {
-    @State private var isMovingLeft = false
-    @State private var isMovingRight = false
-
-    var scene: GameScene {
-        guard let scene = SKScene(fileNamed: "MyScene.sks") as? GameScene else {
-            fatalError("Couldn't load MyScene.sks")
+    var openingScene: SKScene {
+        guard let scene = SKScene(fileNamed: "Opening") else {
+            fatalError("Couldn't load Opening.sks")
         }
-        scene.scaleMode = .resizeFill
+        scene.scaleMode = .aspectFill
         return scene
-        
     }
 
     var body: some View {
-        ZStack {
-            GameView()
-                .ignoresSafeArea()
-        }
+        SpriteView(scene: openingScene)
+            .ignoresSafeArea()
     }
-
 }
-
 
 #Preview {
     ContentView()
 }
-
-
