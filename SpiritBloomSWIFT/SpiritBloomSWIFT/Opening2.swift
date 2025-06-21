@@ -14,7 +14,7 @@ class Opening2: SKScene {
     }
     var hasShaken = false
     let motionManager = CMMotionManager()
-    let shakeThreshold: Double = 2.0
+    let shakeThreshold: Double = 1.5
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
